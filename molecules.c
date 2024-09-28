@@ -21,9 +21,11 @@ int main(void)
 
     /* Print function that prompts user to enter the amount of quarts, and Scan function that retrieves user input. */
     printf("*** Water Molecules Counter ***\nEnter water quantity (in qt): ");
-    scanf("%d", &qts);
+    scanf("%f", &qts);
 
     /* Calculating total moles in amount of quarts given, and then displaying results to the user. */
-    total_moles = (qt2grams * qts) * mass_H2O;
-    printf("Total Number of Molecules = %.2e", total_moles);
+    total_moles = (qt2grams * qts) / mass_H2O;
+    printf("Total Number of Molecules = %.2E", total_moles);
+
+    return 0;
 }
